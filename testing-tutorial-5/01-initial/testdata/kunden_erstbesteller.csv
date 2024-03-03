@@ -1,0 +1,84 @@
+*GTD.Kunden
+
+ FLAG ; BL    ; Benutzername        ; Passwort  ; unbenutzt           ; Mail                              ; Vorname     ; Nachname    ; Adresse1                      ; Adresse2  ;  PLZ  ; Ort                   ; Land    ; Telefonnummer      
+==================================================================================================================================================================================================================================================
+  OK  ; DE-BB ; engelbert.pollmann  ;  engel    ; engelbert.pollmann  ; engelbert.pollmann@t-online.de    ; Engelbert   ; Pollmann    ; Wollnerstraße 8               ;           ; 16230 ; Chorin                ; Germany ; 01578 / 618 275 54 
+  OK  ; DE-BB ; herold              ;  herol    ; herold              ; herold@google.de                  ; Alheidis    ; Herold      ; Hebebrandbrücke 49            ;           ; 16928 ; Lindenberg            ; Germany ; 06403 / 50 87 400  
+  OK  ; DE-BB ; j.henkel            ;  j.hen    ; j.henkel            ; j.henkel@arcor.de                 ; Janna       ; Henkel      ; Ahornstraße 37                ;           ; 15345 ; Prötzel               ; Germany ; 033436 / 96 65 625 
+  OK  ; DE-BE ; friedegund.baer     ;  fried    ; friedegund.baer     ; friedegund.baer@google.fr         ; Friedegund  ; Baer        ; Rennsteig 29                  ;           ; 13629 ; Berlin                ; Germany ; 030 / 40 35 934  
+  OK  ; DE-BW ; almut.kleber        ;  almut    ; almut.kleber        ; almut.kleber@google.fr            ; Almut       ; Kleber      ; Rodachtalweg 26               ;           ; 73345 ; Hohenstadt            ; Germany ; 033744 / 77 80 813    
+  OK  ; DE-BW ; kopper30            ;  koppe    ; kopper30            ; kopper30@google.fr                ; Danica      ; Kopper      ; Vollsackstraße 39             ;           ; 88637 ; Leibertingen          ; Germany ; 05175 / 90 91 461  
+  OK  ; DE-BY ; emde87              ;  emde8    ; emde87              ; emde87@web.de                     ; Ringo       ; Emde        ; Frankfurter Straße 32         ;           ; 93095 ; Hagelstadt            ; Germany ; 01519 / 590 803 90 
+  OK  ; DE-BY ; ggoller             ;  ggoll    ; ggoller             ; ggoller@web.de                    ; Gitte       ; Goller      ; Niddagaustraße 30             ;           ; 90596 ; Schwanstetten         ; Germany ; 09170 / 21 73 161  
+  OK  ; DE-BY ; j.ullrich           ;  j.ull    ; j.ullrich           ; j.ullrich@google.com              ; Josef       ; Ullrich     ; Coschätzer Höhe 36            ;           ; 94559 ; Niederwinkling        ; Germany ; 0174 / 126 321 43  
+  OK  ; DE-BY ; lilia.wetzel        ;  lilia    ; lilia.wetzel        ; lilia.wetzel@web.de               ; Lilia       ; Wetzel      ; Mundsburger Damm 49           ;           ; 90425 ; Nürnberg              ; Germany ; 0911 / 60 78 315  
+  OK  ; DE-HH ; birke.wassermann    ;  birke    ; birke.wassermann    ; birke.wassermann@t-online.de      ; Birke       ; Wassermann  ; Westpreußenweg 47             ;           ; 22175 ; Hamburg               ; Germany ; 040 / 62 79 809  
+  OK  ; DE-MV ; barz50              ;  barz5    ; barz50              ; barz50@google.fr                  ; Ludmilla    ; Barz        ; Am Selzerbrunnen 18           ;           ; 17237 ; Grönow                ; Germany ; 037294 / 86 73 318    
+  OK  ; DE-MV ; gabriel.vaupel      ;  gabri    ; gabriel.vaupel      ; gabriel.vaupel@yahoo.de           ; Gabriel     ; Vaupel      ; Giselbertstraße 6             ;           ; 18195 ; Tessin                ; Germany ; 035456 / 68 36 700 
+  OK  ; DE-MV ; hweidlich           ;  hweid    ; hweidlich           ; hweidlich@yahoo.com               ; Haimo       ; Weidlich    ; Bruckergasse 45               ;           ; 17498 ; Mesekenhagen          ; Germany ; 038351 / 37 41 869 
+  OK  ; DE-MV ; preiss90            ;  preis    ; preiss90            ; preiss90@web.de                   ; Heini       ; Preiß       ; Liliengasse 24                ;           ; 19217 ; Schlagsdorf           ; Germany ; 05335 / 56 19 650  
+  OK  ; DE-NI ; diethardt.schwalm   ;  dieth    ; diethardt.schwalm   ; diethardt.schwalm@google.com      ; Diethardt   ; Schwalm     ; Ulmenstraße 43                ;           ; 21255 ; Wistedt               ; Germany ; 02742 / 72 35 351  
+  OK  ; DE-NI ; hkessel             ;  hkess    ; hkessel             ; hkessel@live.com                  ; Hiltrude    ; Kessel      ; Bauhofstraße 32               ;           ; 27616 ; Heerstedt             ; Germany ; 01511 / 503 410 35 
+  OK  ; DE-NI ; hsperber            ;  hsper    ; hsperber            ; hsperber@google.de                ; Herfried    ; Sperber     ; Schönbornreihe 25             ;           ; 26906 ; Dersum                ; Germany ; 0172 / 648 648 84  
+  OK  ; DE-NI ; t.lackner           ;  t.lac    ; t.lackner           ; t.lackner@google.com              ; Tell        ; Lackner     ; Aschebachstraße 26            ;           ; 21770 ; Mittelstenahe         ; Germany ; 08262 / 74 81 523  
+  OK  ; DE-NW ; joscha.roessler     ;  josch    ; joscha.roessler     ; joscha.roessler@google.de         ; Joscha      ; Rößler      ; Maulbeerwiese 11              ;           ; 40235 ; Düsseldorf            ; Germany ; 034386 / 27 54 218 
+  OK  ; DE-RP ; kohl81              ;  kohl8    ; kohl81              ; kohl81@live.com                   ; Gislind     ; Kohl        ; Häpers Kamp 2                 ;           ; 66917 ; Knopp-Labach          ; Germany ; 09527 / 21 85 503  
+  OK  ; DE-RP ; nweissenborn        ;  nweis    ; nweissenborn        ; nweissenborn@arcor.de             ; Nathalie    ; Weißenborn  ; Klöckelsbergstraße 49         ;           ; 54646 ; Burg                  ; Germany ; 0170 / 209 794 32  
+  OK  ; DE-RP ; s.schober           ;  s.sch    ; s.schober           ; s.schober@web.de                  ; Sigfried    ; Schober     ; Franz Schubert-Platz 14       ;           ; 54413 ; Bescheid              ; Germany ; 0173 / 828 306 98  
+  OK  ; DE-RP ; s.troeger           ;  s.tro    ; s.troeger           ; s.troeger@web.de                  ; Solveig     ; Tröger      ; Bonnewitzer Weg 41            ;           ; 56368 ; Klingelbach           ; Germany ; 01577 / 890 592 25 
+  OK  ; DE-RP ; tschubert           ;  tschu    ; tschubert           ; tschubert@yahoo.com               ; Theodeline  ; Schubert    ; Kirchenstraße 1               ;           ; 56412 ; Oberelbert            ; Germany ; 08404 / 31 78 688  
+  OK  ; DE-RP ; w.kettner           ;  w.ket    ; w.kettner           ; w.kettner@google.com              ; Wendeline   ; Kettner     ; Malerstraße 2                 ;           ; 54576 ; Hillesheim            ; Germany ; 05373 / 66 23 371  
+  OK  ; DE-SH ; ewiebe              ;  ewieb    ; ewiebe              ; ewiebe@t-online.de                ; Elma        ; Wiebe       ; Löwengasse 39                 ;           ; 25813 ; Schwesing             ; Germany ; 01519 / 549 410 85 
+  OK  ; DE-SH ; fast                ;  fast     ; fast                ; fast@google.fr                    ; Gerwin      ; Fast        ; Bonhoefferstraße 12           ;           ; 23826 ; Fredesdorf            ; Germany ; 01521 / 856 702 76 
+  OK  ; DE-SH ; gwegmann            ;  gwegm    ; gwegmann            ; gwegmann@gmx.de                   ; Goswin      ; Wegmann     ; Gustav-Voigt-Straße 4         ;           ; 25709 ; Kaiser-Wilhelm-Koog   ; Germany ; 01523 / 669 250 13 
+  OK  ; DE-SH ; hdoehler            ;  hdoeh    ; hdoehler            ; hdoehler@web.de                   ; Henrike     ; Döhler      ; Kümmelschänkenweg 3           ;           ; 25709 ; Marnerdeich           ; Germany ; 04851 / 95 34 527  
+  OK  ; DE-SH ; kuebler             ;  kuebl    ; kuebler             ; kuebler@t-online.de               ; Lieschen    ; Kübler      ; Ruth-Moufang-Straße 17        ;           ; 25560 ; Agethorst             ; Germany ; 01516 / 240 744 38 
+  OK  ; DE-SH ; ritz                ;  ritz     ; ritz                ; ritz@google.de                    ; Lintrud     ; Ritz        ; Baumwiesenweg 24              ;           ; 24217 ; Wisch                 ; Germany ; 0160 / 775 411 12  
+  OK  ; DE-SH ; vappelt             ;  vappe    ; vappelt             ; vappelt@t-online.de               ; Valentin    ; Appelt      ; Gruneliusstraße 8             ;           ; 25873 ; Rantrum               ; Germany ; 04848 / 51 57 698  
+  OK  ; DE-SH ; wurst87             ;  wurst    ; wurst87             ; wurst87@yahoo.com                 ; Lilli       ; Wurst       ; Brückenstr. 47                ;           ; 23919 ; Niendorf              ; Germany ; 05021 / 39 14 242  
+  OK  ; DE-SN ; cschaffner          ;  cscha    ; cschaffner          ; cschaffner@arcor.de               ; Caren       ; Schaffner   ; Papstdorfer Straße 8          ;           ; 04523 ; Elstertrebnitz        ; Germany ; 01572 / 613 640 37 
+  OK  ; DE-SN ; ingeburg.edler      ;  ingeb    ; ingeburg.edler      ; ingeburg.edler@yahoo.com          ; Ingeburg    ; Edler       ; In der Au 41                  ;           ; 09350 ; Lichtenstein/Sachsen  ; Germany ; 07129 / 76 93 511  
+  OK  ; DE-ST ; abraham             ;  abrah    ; abraham             ; abraham@gmx.com                   ; Brunhild    ; Abraham     ; Ludwig-Erhard-Anlage 29       ;           ; 06420 ; Gerlebogk             ; Germany ; 01516 / 152 690 67                                      
+  OK  ; DE-ST ; fries9              ;  fries    ; fries9              ; fries9@google.de                  ; Christhart  ; Fries       ; Heidelbachstraße 14           ;           ; 39116 ; Magdeburg             ; Germany ; 0391 / 78 68 233  
+  OK  ; DE-ST ; gerhardt.gohlke     ;  gerha    ; gerhardt.gohlke     ; gerhardt.gohlke@gmx.de            ; Gerhardt    ; Gohlke      ; Seeheimer Straße 28           ;           ; 06449 ; Wilsleben             ; Germany ; 035204 / 54 91 130 
+  OK  ; DE-ST ; h.wurm              ;  h.wur    ; h.wurm              ; h.wurm@google.de                  ; Hartmund    ; Wurm        ; Schwarze Straße 42            ;           ; 39319 ; Jerichow              ; Germany ; 039343 / 38 43 911 
+  OK  ; DE-TH ; gglass              ;  gglas    ; gglass              ; gglass@google.fr                  ; Gesine      ; Glaß        ; Hildegard-von-Bingen-Weg 38   ;           ; 07381 ; Pößneck               ; Germany ; 03647 / 72 47 314  
+  OK  ; DE-TH ; h.marschall         ;  h.mar    ; h.marschall         ; h.marschall@yahoo.com             ; Heiner      ; Marschall   ; Stavenort-Brücke 25           ;           ; 37327 ; Kallmerode            ; Germany ; 0178 / 964 868 77  
+  OK  ; DE-TH ; r.kloos             ;  r.klo    ; r.kloos             ; r.kloos@google.com                ; Rainhardt   ; Kloos       ; Fohlengartenstr. 31           ;           ; 98744 ; Deesbach              ; Germany ; 01523 / 323 182 32 
+  OK  ; DE-TH ; stracke31           ;  strac    ; stracke31           ; stracke31@t-online.de             ; Ulfried     ; Stracke     ; Rapunzelgasse 38              ;           ; 37355 ; Kleinbartloff         ; Germany ; 039399 / 59 31 587
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.3.0 (231108a)" language="German" saveDate="2023.12.09 at 15:03:26 CET" saveUser="doschweier">
+  <Conditions>
+    <Condition uId="15834768354816025">
+      <Title language="German" value="Benutzername"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15835916859628373">
+          <Symbol language="German" value="leer"/>
+          <Title language="German" value="Es wurde kein  Benutzername erfasst"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isUsernameEmpty"/>
+          <TestValue group="cucumber" type="tsi" value="das Feld Benutzername leer bleibt"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15835908502447662">
+          <Symbol language="German" value="doppelt"/>
+          <Title language="German" value="Es gibt bereits den Benuztername im System"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=containsUsernameAlready"/>
+          <TestValue group="cucumber" type="tsi" value="der Wert '${*GTD.Konto.Benutzername}' im Feld Benutzername erfasst wird"/>
+          <TestValue group="*ti.gtd.cucumber" type="tsi" value="neu, Konto, Kunden"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15835908502467664" validTestValue="G">
+          <Symbol language="German" value="einzig"/>
+          <Title language="German" value="Benutzername ist im System noch nicht vergeben"/>
+          <TestValue group="cucumber" type="tsi" value="der Wert '${*GTD.Konto.Benutzername}' im Feld Benutzername erfasst wird"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15835903435126883">
+      <Title language="German" value="Passwortstärke"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15835907444907328">
+          <Symbol language="German" value="stark"/>
+          <Title language="German" value="Passwort erfüllt die Sicherheitskriterien"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isPasswordStrong"/>
+          <TestValue group="*ti.gtd.cucumber" type="tcpre" value="neu, Passwort, Passwoerter_stark"/>
+          <TestValue group="cucumber" type="tsi" value="der Wert '${*GTD.Passwort.Passwort}' im Feld Passwort erfasst wird"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15835907444927330" validTestValue="U">
+          <Symbol language="German" value="*"/>
+          <Title language="German" value="Passwort ist leer oder erfüllt die Sicherheitskriterien nicht"/>
+          <TestValue group="*ti.gtd.cucumber" type="tcpre" value="neu, Passwort, Passwoerter_schwach"/>
+          <TestValue group="cucumber" type="tsi" value="der Wert '${*GTD.Passwort.Passwort}' im Feld Passwort erfasst wird"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15835907158957162">
+      <Title language="German" value="eMail-Adresse"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15835920284700528">
+          <Symbol language="German" value="leer"/>
+          <Title language="German" value="keine eMail-Adresse erfasst"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isEMailEmpty"/>
+          <TestValue group="cucumber" type="tsi" value="das Feld EMail leer bleibt"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15835920284720530" validTestValue="G">
+          <Symbol language="German" value="gültig"/>
+          <Title language="German" value="eMail-Adresse wurde erfasst und  erfüllt die Anforderung"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isEMailValid"/>
+          <TestValue group="cucumber" type="tsi" value="der Wert '${*GTD.Konto.Mail}' im Feld EMail erfasst wird"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15835921749530926">
+          <Symbol language="German" value="ungültig"/>
+          <Title language="German" value="eMail-Adresse erfüllt die Anforderungen nicht"/>
+          <TestValue group="cucumber" type="tsi" value="der Wert '${*GTD.Konto.Benutzername}' im Feld EMail erfasst wird"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="mail address"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11446800828767967">
+      <Title language="German" value="Fehlermeldung ausgeben"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15835904351527011">
+          <Symbol language="German" value="USR-MISS"/>
+          <Title language="German" value="Benutzername muss eingegeben werden."/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addMessageUSR_MISS"/>
+          <TestValue group="cucumber" type="tse" value="soll die Fehlermeldung '${*LFET.Wert.Beschreibung}' auf der Webseite angezeigt werden"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15834782512476484">
+          <Symbol language="German" value="USR-EXISTS"/>
+          <Title language="German" value="Benutzername ist bereits im System vergeben."/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addMessageUSR_EXISTS"/>
+          <TestValue group="cucumber" type="tse" value="soll die Fehlermeldung '${*LFET.Wert.Beschreibung}' auf der Webseite angezeigt werden"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15834783162636488">
+          <Symbol language="German" value="PWD-WEAK"/>
+          <Title language="German" value="Das Passwort ist zu schwach."/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addMessagePWD_WEAK"/>
+          <TestValue group="cucumber" type="tse" value="soll die Fehlermeldung '${*LFET.Wert.Beschreibung}' auf der Webseite angezeigt werden"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15834793212856767">
+          <Symbol language="German" value="EMA-MISS"/>
+          <Title language="German" value="Die eMail-Adresse muss ergänzt werden."/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addMessageEMA_MISS"/>
+          <TestValue group="cucumber" type="tse" value="soll die Fehlermeldung '${*LFET.Wert.Beschreibung}' auf der Webseite angezeigt werden"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15834793634396770">
+          <Symbol language="German" value="EMA-MALF"/>
+          <Title language="German" value="Die eMail-Adresse ist nicht korrekt formatiert."/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addMessageEMA_MALF"/>
+          <TestValue group="cucumber" type="tse" value="die Fehlermeldung '${*LFET.Wert.Beschreibung}' soll auf der Webseite angezeigt werden"/>
+        </ActionOccurrence>
+        <TestValue group="cucumber" type="tse" value="Und keine Fehlermeldung angezeigt werden"/>
+      </ActionOccurrences>
+      <TestValue group="*ti.att.cucumber" type="tspre" value="sid=510"/>
+    </Action>
+    <Action uId="15840785799996859">
+      <Title language="German" value="Folgeseite nach Registierung"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15840786141867413">
+          <Symbol language="German" value="Redirect"/>
+          <Title language="German" value="Konto wird angelegt und Benutzer gelangt zum Katalog"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doRedirectCatalogActionBean"/>
+          <TestValue group="cucumber" type="tse" value="soll das Benutzerkonto angelegt werden"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="15840787317117419">
+          <Symbol language="German" value="ERROR"/>
+          <Title language="German" value="Konto wird nicht angelegt und Benutzer bekommt Fehlermeldungen angezeigt"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=doForwardResolutionNewAccount"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+      <TestValue group="*ti.att.cucumber" type="tspre" value="sid=500"/>
+    </Action>
+  </Actions>
+  <Rules lastId="69">
+    <Rule id="64">
+      <ActionOccurrenceLink link="15835904351527011"/>
+      <ConditionOccurrenceLink link="15835916859628373"/>
+      <ActionOccurrenceLink link="15840787317117419"/>
+    </Rule>
+    <Rule id="65">
+      <ActionOccurrenceLink link="15834782512476484"/>
+      <ConditionOccurrenceLink link="15835908502447662"/>
+      <ActionOccurrenceLink link="15840787317117419"/>
+    </Rule>
+    <Rule id="66">
+      <ConditionOccurrenceLink link="15835908502467664"/>
+      <ConditionOccurrenceLink link="15835907444907328"/>
+      <ConditionOccurrenceLink link="15835920284700528"/>
+      <ActionOccurrenceLink link="15834793212856767"/>
+      <ActionOccurrenceLink link="15840787317117419"/>
+    </Rule>
+    <Rule id="67">
+      <ConditionOccurrenceLink link="15835908502467664"/>
+      <ConditionOccurrenceLink link="15835907444907328"/>
+      <ConditionOccurrenceLink link="15835920284720530"/>
+      <ActionOccurrenceLink link="15840786141867413"/>
+    </Rule>
+    <Rule id="68">
+      <ConditionOccurrenceLink link="15835908502467664"/>
+      <ConditionOccurrenceLink link="15835907444907328"/>
+      <ConditionOccurrenceLink link="15835921749530926"/>
+      <ActionOccurrenceLink link="15834793634396770"/>
+      <ActionOccurrenceLink link="15840787317117419"/>
+    </Rule>
+    <Rule id="69">
+      <ConditionOccurrenceLink link="15835908502467664"/>
+      <ConditionOccurrenceLink link="15835907444927330"/>
+      <ActionOccurrenceLink link="15834783162636488"/>
+      <ActionOccurrenceLink link="15840787317117419"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Prüfungen bei Neuanlage eines Benutzerkontos im Onlineshop"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$package=group.rulebased.jpetstore.web.actions.lfet&lt;br/&gt;// $$InterfaceName=IAccountActionBean&lt;br/&gt;// $$InterfaceRulesClassName=AccountValidationEngine&lt;br/&gt;// $$InterfaceRuleGroups=true"/>
+  <TestValueGroups selectedGroup="cucumber">
+    <TestValueGroup name="*ti.gtd.cucumber"/>
+    <TestValueGroup name="*ti.att.cucumber"/>
+    <TestValueGroup name="cucumber" description="In dieser Gruppe werden die Testanweisungen zur Generierung der Tests in Gherkin-Syntax hinterlegt. Diese Testfälle werden in der Pipeline als Unit-Test ausgeführt." tvgTiAtt="*ti.att.cucumber" tvgTiCheck="*ti.check" tvgTiGTD="*ti.gtd.cucumber">
+      <Config name="jenkins" tags="cucumber" parms="-Group 'cucumber' -GtdDirectory './testdata/' -GtdFileNamePattern '*.txt; *.csv' -NonExecutableRules '50' -RecommendedTestCases -IrrelevantConditions -Categories -OutGherkin 'BenutzerkontoErstellungOnlineshop.testcases.feature'"/>
+    </TestValueGroup>
+  </TestValueGroups>
+  <TestValue group="cucumber" type="isi" value="Und  die Schaltfläche &quot;Benutzer anlegen&quot; gedrückt wird"/>
+  <TestValue group="*ti.gtd.cucumber" type="tcpre" value="neu, Konto, Benutzerkonten_neu"/>
+  <TestValue group="cucumber" type="tcpre" value="# language: de&lt;br/&gt;die Seite zum Anlegen eines Benutzerkontos ist geöffnet"/>
+</LFET>
