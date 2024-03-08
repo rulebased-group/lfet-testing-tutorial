@@ -1,0 +1,18 @@
+LFET:
+  
+  Project:
+    
+    # the global unique project id
+    Url: https://github.com/rulebased-group/lfet-testing-tutorial.git
+    
+    DecisionTables:
+      
+      # list of regex
+      NamePattern:
+        - ^BenutzerkontoErstellungOnlineshop[.]lfet$
+
+      # list of regex relative to this '.lfet' file's folder
+      # use always '/' as file separator
+      PathPattern: 
+        - ^[/]?testing-tutorial-5/01-initial[/]?$
+        - ^[/]?testing-tutorial-5/02-updated[/]?$
