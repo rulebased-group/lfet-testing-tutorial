@@ -1,3 +1,10 @@
+# This file must not be changed.
+#
+# The content format is YAML and its checksum value must match
+# with the checksum value stored in the corresponding license file.
+#
+# Any CER's are welcome here: dirk.o.schweier@rulebased.group
+
 LFET:
   
   Project:
@@ -7,7 +14,8 @@ LFET:
     
     DecisionTables:
       
-      # list of regex
+      # list of regular expressions for allowed decision table file names 
+      # incl. common 'save as' formats
       NamePattern:
         - ^BenutzerkontoErstellungOnlineshop[.]lfet$
 
