@@ -13,6 +13,9 @@ Examples from some episodes of the Testing-Tutorials that can be seen on YouTube
 
 Find the Testing-Tutorials here: https://www.youtube.com/watch?v=_Ndx4YwPT6Y&list=PLyKvkX05HliK9PagdukSBEdifHxr1Z1yo&pp=iAQB
 
+Find more information aborut the decision table tool on the website of 
+LOHRFINK software engineering: https://www.lohrfink.de/en/solutions/lf-et/
+
 ---
 
 # Beispiele zu den Testing-Tutorials
@@ -27,6 +30,9 @@ automatisiert Testfälle generieren kann.
 Damit das Gezeigte in den Tutorials besser nachvollzogen werden kann, wollen
 wir hier die Entscheidungstabellen bereitstellen.
 
+Für Fragen und Anregungen ist die rulebased group unter support@rulebased.group
+ansprechbar.
+
 ## Woher bekomme ich die Software LF-ET?
 
 Um die Entscheidungstabellen bearbeiten zu können wird die Software LF-ET der
@@ -36,6 +42,10 @@ Ein Installationspaket kann unter diesem Link heruntergeladen werden:
 https://www.lohrfink.de/lfet/lfet.latest.inst
 
 Die Installationsanleitung ist in dem Installationspaket enthalten.
+
+Mehr Informationen zu der Software zur Entwicklung und Arbeit mit 
+Entscheidungstabellen sind auf den Webseiten der Firma LOHRFINK software engineering
+zu finden: https://www.lohrfink.de/de/produkte/lf-et/
 
 ## Wie nutze ich die Daten in diesem Repository?
 
