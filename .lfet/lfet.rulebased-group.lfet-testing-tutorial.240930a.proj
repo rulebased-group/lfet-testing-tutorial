@@ -25,12 +25,12 @@ LFET:
         FileNamePattern:
         # List of regular expressions for allowed file names
         # incl. common 'save as' and export formats
-        - ^(?i)BenutzerkontoErstellungOnlineshop([.]lfet|([(]Rwa[)]|[(]ras[)])?[.]xls[x]?|[.]testcases[.]feature)$
-        - ^(?i)Spendenaufruf([.]lfet|([(]Rwa[)]|[(]ras[)])?[.]xls[x]?|[.]testcases[.]feature)$
+        - ^(?i)BenutzerkontoErstellungOnlineshop[.].*$
+        - ^(?i)Spendenaufruf[.].*$
 
         DirectoryNamePattern:
         # List of regular expressions for allowed directory names
         # relative to the project content root
         # use always '/' as file separator
         - ^(?i)[/]?testing-tutorial-[56]/01-initial[/]?$
-        - ^(?i)[/]?testing-tutorial-[56]/02-updated[/]?$
+        - ^(?i)[/]?testing-tutorial-[567]/02-updated[/]?$
