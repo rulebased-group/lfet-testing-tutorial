@@ -27,6 +27,7 @@ LFET:
         # incl. common 'save as' and export formats
         - ^(?i)BenutzerkontoErstellungOnlineshop[.].*$
         - ^(?i)Spendenaufruf[.].*$
+        - ^(?i)ZahlungswegeOnlineshop[.].*$
 
         DirectoryNamePattern:
         # List of regular expressions for allowed directory names
@@ -34,3 +35,4 @@ LFET:
         # use always '/' as file separator
         - ^(?i)[/]?testing-tutorial-[56]/01-initial[/]?$
         - ^(?i)[/]?testing-tutorial-[567]/02-updated[/]?$
+        - ^(?i)[/]?testing-tutorial-8[/]?$

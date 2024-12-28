@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.3.0 (241202a)" language="German" saveDate="2024.12.28 at 14:02:51 CET" saveUser="doschweier">
+  <Conditions>
+    <Condition uId="15714110241739078">
+      <Title language="German" value="Bestellwert"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714110690599127">
+          <Symbol language="German" value="gering"/>
+          <Title language="German" value="[ 0,0 : 20,0 ["/>
+          <Symbol language="English" value="small"/>
+          <Title language="English" value="[0,0;20,0["/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+          <TestValue group="Tutorial - Folge 1*" type="tsi" value="Legen Sie die folgenden Produkte in den Warenkorb:&lt;br/&gt;&lt;br/&gt;Aus dem Bereich Katzen und der Gruppe &quot;Pflegemittel: Katzenstreu&quot;:&lt;br/&gt;1x Naturton-Klumpstreu, 6 kg, EUR 6,50"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714110690619129">
+          <Symbol language="German" value="normal"/>
+          <Title language="German" value="[ 20,0 : 75,0 ["/>
+          <Symbol language="English" value="usual"/>
+          <Title language="English" value="[20,0:75,0["/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714111827649136">
+          <Symbol language="German" value="hoch"/>
+          <Title language="German" value="[ 75,0 : 300,0 ["/>
+          <Symbol language="English" value="large"/>
+          <Title language="English" value="[75,0; 300,0["/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714112263679139">
+          <Symbol language="German" value="sehr hoch"/>
+          <Title language="German" value="[ 300,0 : Inf ["/>
+          <Symbol language="English" value="very large"/>
+          <Title language="English" value="[ 300,0 : Inf ["/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="order value"/>
+    </Condition>
+    <Condition uId="11446800829457960">
+      <Title language="German" value="Erste Bestellung"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15729537548780006">
+          <Symbol language="German" value="J"/>
+          <Title language="German" value="Ja"/>
+          <Symbol language="English" value="Y"/>
+          <Title language="English" value="Yes"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=isFirstOrder"/>
+          <TestValue group="Robot Framework" type="tsi" value="Perform Sign On     ${*GTD.kunde.benutzername}     ${*GTD.kunde.passwort}"/>
+          <TestValue group="*ti.gtd.robot" type="tcpre" value="neu, kunde, Neukunden"/>
+          <TestValue group="*ti.gtd.robot*" type="tcpre" value="neu, kunde, Neukunden"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15729537548800008">
+          <Symbol language="German" value="N"/>
+          <Title language="German" value="Nein"/>
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="No"/>
+          <TestValue group="Robot Framework" type="tsi" value="Perform Sign On     ${*GTD.kunde.benutzername}     ${*GTD.kunde.passwort}"/>
+          <TestValue group="*ti.gtd.robot" type="tcpre" value="neu, kunde, Bestandskunden"/>
+          <TestValue group="*ti.gtd.robot*" type="tcpre" value="neu, kunde, Bestandskunden"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="first order"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="force=true"/>
+    </Condition>
+    <Condition uId="15714114531689185">
+      <Title language="German" value="Art des Warenkorbs"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714116272349259">
+          <Symbol language="German" value="1 Prod."/>
+          <Title language="German" value="nur ein Produkt in beliebiger Anzahl"/>
+          <Symbol language="English" value="1 lot"/>
+          <Title language="English" value="nur ein Produkt in beliebiger Anzahl"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=containsBasketOnlyOneProduct"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;1 Prod.&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;1 Prod.&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714116272369261">
+          <Symbol language="German" value="1 Kat."/>
+          <Title language="German" value="beliebige Anzahl von Produkten aus genau einer Kategorie"/>
+          <Symbol language="English" value="1 category"/>
+          <Title language="English" value="beliebige Anzahl von Produkten aus genau einer Kategorie"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=containsBasketOnlyOneCategory"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;1 Kat.&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;1 Kat.&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714117223589266">
+          <Symbol language="German" value="2 Kat."/>
+          <Title language="German" value="beliebige Anzahl von Produkten aus genau zwei Kategorien"/>
+          <Symbol language="English" value="2 categories"/>
+          <Title language="English" value="beliebige Anzahl von Produkten aus genau zwei Kategorien"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="LogArg" value="$$MN=containsBasketOnlyTwoCategories"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;2 Kat.&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;2 Kat.&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714117718229269">
+          <Symbol language="German" value="n Kat."/>
+          <Title language="German" value="gemischter Warenkorb aus mehr als zwei Kategorien"/>
+          <Symbol language="English" value="n categories"/>
+          <Title language="English" value="gemischter Warenkorb aus mehr als zwei Kategorien"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;n Kat.&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;n Kat.&quot;"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="type of shopping cart"/>
+    </Condition>
+    <Condition uId="15714115122489187">
+      <Title language="German" value="mindestens ein Tier aus der Kategorie"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714118221089411">
+          <Symbol language="German" value="Fische"/>
+          <Title language="German" value="Kategorie Fische"/>
+          <Symbol language="English" value="FISH"/>
+          <Title language="English" value="Kategorie Fische"/>
+          <TestValue group="Robot Framework" type="tcpre" value="# Testfall Vorbedingung B04/01&lt;br/&gt;Open Aquarium"/>
+          <TestValue group="Robot Framework" type="tcpost" value="# Testfall Nachbedingung B04/01&lt;br/&gt;Close Aquarium&lt;br/&gt;"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Fische=1"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Fische=1"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714118221109413">
+          <Symbol language="German" value="Hunde"/>
+          <Title language="German" value="Kategorie Hunde"/>
+          <Symbol language="English" value="DOGS"/>
+          <Title language="English" value="Kategorie Hunde"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Hunde=1"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Hunde=1"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714118702929418">
+          <Symbol language="German" value="Rept."/>
+          <Title language="German" value="Kategorie Reptilien"/>
+          <Symbol language="English" value="REPTILES"/>
+          <Title language="English" value="Kategorie Reptilien"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Reptilien=1"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Reptilien=1"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714118867339421">
+          <Symbol language="German" value="Katzen"/>
+          <Title language="German" value="Kategorie Katzen"/>
+          <Symbol language="English" value="CATS"/>
+          <Title language="English" value="Kategorie Katzen"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Katzen=1"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Katzen=1"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714118983089424">
+          <Symbol language="German" value="Vögel"/>
+          <Title language="German" value="Kategorie Vögel"/>
+          <Symbol language="English" value="BIRDS"/>
+          <Title language="English" value="Kategorie Vögel"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, warenkorb, warenkorb, Voegel=1"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, warenkorb, warenkorb, Voegel=1"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="category in basket"/>
+    </Condition>
+    <Condition uId="15714113532899180">
+      <Title language="German" value="Region innerhalb von Deutschland"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714119877440774">
+          <Symbol language="German" value="Nord"/>
+          <Title language="German" value="Kunden aus den Bundesländern Bremen, Hamburg, Mecklenburg-Vorpommern, Niedersachsen und Schleswig Holstein"/>
+          <Symbol language="English" value="DE-NORTH"/>
+          <Title language="English" value="Kunden aus den Bundesländern Bremen, Hamburg, Mecklenburg-Vorpommern, Niedersachsen und Schleswig Holstein"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-HB, DE-HH, DE-MV, DE-NI, DE-SH)&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-HB, DE-HH, DE-MV, DE-NI, DE-SH)&quot;"/>
+          <TestValue group="Tutorial - Folge 1*" type="tcpre" value="Melden Sie sich am JPetStore mit den folgenden Informationen an:&lt;br/&gt;&lt;br/&gt;Benutzername: zabel&lt;br/&gt;Passwort: zabel"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714119877460776">
+          <Symbol language="German" value="Ost"/>
+          <Title language="German" value="Kunden aus den Bundesländern Berlin, Brandenburg, Sachsen, Sachsen-Anhalt und Thüringen"/>
+          <Symbol language="English" value="DE-EAST"/>
+          <Title language="English" value="Kunden aus den Bundesländern Berlin, Brandenburg, Sachsen, Sachsen-Anhalt und Thüringen"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-BE, DE-BB, DE-SN, DE-ST, DE-TH)&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-BE, DE-BB, DE-SN, DE-ST, DE-TH)&quot;"/>
+          <TestValue group="Tutorial - Folge 1*" type="tcpre" value="Melden Sie sich am JPetStore mit den folgenden Informationen an:&lt;br/&gt;&lt;br/&gt;Benutzername: friedegund.baer&lt;br/&gt;Passwort: fried"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714120011950781">
+          <Symbol language="German" value="Süd"/>
+          <Title language="German" value="Kunden aus den Bundesländern Baden-Württemberg und Bayern"/>
+          <Symbol language="English" value="DE-SOUTH"/>
+          <Title language="English" value="Kunden aus den Bundesländern Baden-Württemberg und Bayern"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-BW, DE-BY)&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-BW, DE-BY)&quot;"/>
+          <TestValue group="Tutorial - Folge 1*" type="tcpre" value="Melden Sie sich am JPetStore mit den folgenden Informationen an:&lt;br/&gt;&lt;br/&gt;Benutzername: lilia.wetzel&lt;br/&gt;Passwort: lilia"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714120047960783">
+          <Symbol language="German" value="West"/>
+          <Title language="German" value="Kunden aus den Bundesländern Hessen, Nordrhein-Westfalen, Rheinland-Pfalz und Saarland"/>
+          <Symbol language="English" value="DE-WEST"/>
+          <Title language="English" value="Kunden aus den Bundesländern Hessen, Nordrhein-Westfalen, Rheinland-Pfalz und Saarland"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-HE, DE-NW, DE-RP, DE-SL)&quot;"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-HE, DE-NW, DE-RP, DE-SL)&quot;"/>
+          <TestValue group="Tutorial - Folge 1*" type="tcpre" value="Melden Sie sich am JPetStore mit den folgenden Informationen an:&lt;br/&gt;&lt;br/&gt;Benutzername: dietlind.boehm&lt;br/&gt;Passwort: dietl"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15719844997174546">
+          <Symbol language="German" value="sonst."/>
+          <Title language="German" value="Kunden außerhalb von Deutschland oder ohne Angabe"/>
+          <Symbol language="English" value="else"/>
+          <Title language="English" value="Kunden außerhalb von Deutschland oder ohne Angabe"/>
+          <TestValue group="*ti.gtd.robot" type="tsi" value="neu, kunde, kunde, Land != Germany"/>
+          <TestValue group="*ti.gtd.robot*" type="tsi" value="neu, kunde, kunde, Land != Germany"/>
+          <TestValue group="Tutorial - Folge 1*" type="tcpre" value="Melden Sie sich am JPetStore mit den folgenden Informationen an:&lt;br/&gt;&lt;br/&gt;Benutzername: PArapr52&lt;br/&gt;Passwort: NKVG622-ocxu"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="destination"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11446800828767967">
+      <Title language="German" value="Kreditkarte: American Express"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714126476301720">
+          <Symbol language="German" value="AMEX"/>
+          <Title language="German" value="American Express"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByCreditCard_AMEX"/>
+          <Symbol language="English" value="AMEX"/>
+          <Title language="English" value="American Express"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     ${$LFET.Beschreibung}      True"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Kreditkarte: American Express&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     American Express      False"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Kreditkarte: American Express&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="debit card: American Express"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="sid=500"/>
+    </Action>
+    <Action uId="15714126632802235">
+      <Title language="German" value="Kreditkarte: Diners Club"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714126632832238">
+          <Symbol language="German" value="DC"/>
+          <Title language="German" value="Diners Club"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByCreditCard_DC"/>
+          <Symbol language="English" value="DC"/>
+          <Title language="English" value="Diners Club"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     ${$LFET.Beschreibung}      True"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Kreditkarte: Diners Club&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     Diners Club      False"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Kreditkarte: Diners Club&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="debit card: Diners Club"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="sid=510"/>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="Kreditkarte: Mastercard"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714126527942060">
+          <Symbol language="German" value="MC"/>
+          <Title language="German" value="Mastercard"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByCreditCard_MC"/>
+          <Symbol language="English" value="MC"/>
+          <Title language="English" value="Mastercard"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     ${$LFET.Beschreibung}      True"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Kreditkarte: Mastercard&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     Mastercard      False"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Kreditkarte: Mastercard&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="debit card: Mastercard"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="sid=520"/>
+    </Action>
+    <Action uId="15714126565832227">
+      <Title language="German" value="Kreditkarte: VISA"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714126565862230">
+          <Symbol language="German" value="VISA"/>
+          <Title language="German" value="VISA Card"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByCreditCard_VISA"/>
+          <Symbol language="English" value="VISA"/>
+          <Title language="English" value="VISA Card"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     VISA      True"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Kreditkarte: VISA&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     VISA      False"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Kreditkarte: VISA&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="debit card: VISA"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="sid=530"/>
+    </Action>
+    <Action uId="15714129178622247">
+      <Title language="German" value="online: Paypal"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714129178652250">
+          <Symbol language="German" value="Paypal"/>
+          <Title language="German" value="Aktion ausführen"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByOnlineService_Paypal"/>
+          <Symbol language="English" value="Paypal"/>
+          <Title language="English" value="Aktion ausführen"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     Paypal      True"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;online: Paypal&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     Paypal      False"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;online: Paypal&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="online: Paypal"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="sid=540"/>
+    </Action>
+    <Action uId="15714129186452254">
+      <Title language="German" value="online: sofortüberweisung.de"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714129186482257">
+          <Symbol language="German" value="sofort"/>
+          <Title language="German" value="sofortüberweisung.de"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByOnlineService_Sofort"/>
+          <Symbol language="English" value="sofort"/>
+          <Title language="English" value="sofortüberweisung.de"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     ${$LFET.Beschreibung}      True"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;online: sofortüberweisung.de&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option    sofortüberweisung.de      False"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;online: sofortüberweisung.de&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="online: sofortüberweisung.de"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="sid=550"/>
+    </Action>
+    <Action uId="15714129714132268">
+      <Title language="German" value="online: giropay"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714129714162271">
+          <Symbol language="German" value="giropay"/>
+          <Title language="German" value="Bezahldienst giropay"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByOnlineService_Giropay"/>
+          <Symbol language="English" value="giropay"/>
+          <Title language="English" value="Bezahldienst giropay"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     ${$LFET.Symbol}      True"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;online: giropay&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     giropay      False"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;online: giropay&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="online: giropay"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="sid=560"/>
+    </Action>
+    <Action uId="15714129439572261">
+      <Title language="German" value="Lastschriftverfahren"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714129439602264">
+          <Symbol language="German" value="LSV"/>
+          <Title language="German" value="Lastschriftverfahren"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByDirectDebit"/>
+          <Symbol language="English" value="LSV"/>
+          <Title language="English" value="Lastschriftverfahren"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     Lastschrift      True"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Lastschriftverfahren&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option    Lastschrift      False"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Lastschriftverfahren&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="direct debit"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="sid=570"/>
+    </Action>
+    <Action uId="15714130008082275">
+      <Title language="German" value="Rechnung"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15716688245484817">
+          <Symbol language="German" value="Rechnung"/>
+          <Title language="German" value="Bezahlung per Rechnung"/>
+          <SourceCode codeLanguage="Java" sourceCodeType="StmtSeq" value="$$MN=addPaymentByInvoice"/>
+          <Symbol language="English" value="Rechnung"/>
+          <Title language="English" value="Bezahlung per Rechnung"/>
+          <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     Rechnung      True&lt;br/&gt;Cart Value Should Be Equal    ${*GTD.warenkorb.Warenwert}"/>
+          <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Rechnung&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+        </ActionOccurrence>
+        <TestValue group="Robot Framework" type="tsi" value="Check Payment Option     Rechnung      False&lt;br/&gt;Cart Value Should Be Equal    ${*GTD.warenkorb.Warenwert}"/>
+        <TestValue group="Tutorial - Folge 1*" type="tse" value="Prüfen Sie, das die Option &quot;Rechnung&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+      </ActionOccurrences>
+      <Title language="English" value="invoice"/>
+      <TestValue group="*ti.att.robot" type="tspre" value="// Die 'Rechnung' soll immer als letzter Testschritt ausgeführt werden, da hierbei auch der Bestellvorgang&lt;br/&gt;// abgeschlossen und die Rechnungssumme geprüft wird&lt;br/&gt;&lt;br/&gt;sid=580"/>
+    </Action>
+  </Actions>
+  <Rules lastId="165">
+    <Rule id="155">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15714119877440774"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+    </Rule>
+    <Rule id="156">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15714119877460776"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+    </Rule>
+    <Rule id="157">
+      <ActionOccurrenceLink link="15714129186482257"/>
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15714120011950781"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+    </Rule>
+    <Rule id="158">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15714120047960783"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+    </Rule>
+    <Rule id="159">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15719844997174546"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+    </Rule>
+    <Rule id="160">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15729537548800008"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15716688245484817"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+    </Rule>
+    <Rule id="123">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272349259"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="124">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118221089411"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+    </Rule>
+    <Rule id="125">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118221109413"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="139">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118702929418"/>
+      <ActionOccurrenceLink link="15716688245484817"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="127">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118867339421"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="128">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118983089424"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+    </Rule>
+    <Rule id="129">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714117223589266"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="130">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714117718229269"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="161">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+      <ConditionOccurrenceLink link="15714119877440774"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+    </Rule>
+    <Rule id="162">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+      <ConditionOccurrenceLink link="15714119877460776"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+    </Rule>
+    <Rule id="163">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+      <ConditionOccurrenceLink link="15714120011950781"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+    </Rule>
+    <Rule id="164">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+      <ConditionOccurrenceLink link="15714120047960783"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+    </Rule>
+    <Rule id="165">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+      <ConditionOccurrenceLink link="15719844997174546"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+    </Rule>
+    <Rule id="132">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ConditionOccurrenceLink link="15729537548800008"/>
+      <ActionOccurrenceLink link="15716688245484817"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="133">
+      <ConditionOccurrenceLink link="15714112263679139"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+    </Rule>
+    <Rule id="134">
+      <ConditionOccurrenceLink link="15714112263679139"/>
+      <ConditionOccurrenceLink link="15729537548800008"/>
+      <ActionOccurrenceLink link="15716688245484817"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Anforderungen für die angebotenen Zahlungswege im Onlineshop"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <SourceCode codeLanguage="Java" sourceCodeType="Prolog" value="// $$package=group.rulebased.jpetstore.domain.lfet&lt;br/&gt;// $$InterfaceName=IOnlineOrderPaymentOptions&lt;br/&gt;// $$InterfaceRulesClassName=PaymentOptionsEngine"/>
+  <TestValueGroups selectedGroup="Robot Framework">
+    <TestValueGroup name="Robot Framework" description="In dieser Gruppe sind die Anweisungen enthalten, mit denen Testfälle für das Robot Framework generiert werden können." tvgTiAtt="*ti.att.robot" tvgTiGTD="*ti.gtd.robot">
+      <Config name="Fallstrick" tags="robot" description="In diesem Fall werden Neukunden aus Süddeutschland mehrfach genutzt, was daszu führt, dass Testfälle fehlschlagen, da die Testdaten nur für eine Testdurchführung verwendet werden können." parms="-Group 'Robot Framework' -GtdDirectory 'testdata' -DDTableName 'kunde' -DDLimit '3' -NonExecutableRules '50' -RecommendedTestCases -Borders -OutRobotFramework 'ZahlungswegeOnlineshop.testcases.robot'"/>
+      <Config name="Tutorial 8" tags="robot" description="Konfiguration zur Präsentation der Testfallgenerierung." parms="-Group 'Robot Framework' -GtdDirectory 'testdata' -DDTableName 'warenkorb' -DDLimit '3' -NonExecutableRules '50' -RecommendedTestCases -Borders -OutRobotFramework 'ZahlungswegeOnlineshop.testcases.robot'"/>
+    </TestValueGroup>
+    <TestValueGroup name="*ti.att.robot"/>
+    <TestValueGroup name="*ti.gtd.robot"/>
+  </TestValueGroups>
+  <Title language="English" value="Requirements for the payment methods offered in the online shop"/>
+  <Text language="English" value="Die englische Sprache wird für die Enum-Generierung genutzt und ist daher &quot;unvollständig&quot;."/>
+  <TestValue group="Robot Framework" type="tcpre" value="*robot.Settings    Library      SeleniumLibrary&lt;br/&gt;*robot.Settings    Library      String&lt;br/&gt;*robot.Settings    Resource     ${RESPATH}/JPetStore.resource&lt;br/&gt;*robot.Settings    *** Variables ***&lt;br/&gt;*robot.Settings    ${RESPATH}      ../../../../test/robotframework/library/&lt;br/&gt;*robot.Settings    ${HOST}         localhost&lt;br/&gt;*robot.Settings    ${PORT}         8080&lt;br/&gt;*robot.Settings    ${BROWSER}      chrome&lt;br/&gt;&lt;br/&gt;Open Browser     http://${HOST}:${PORT}/jpetstore/actions/Catalog.action&lt;br/&gt;...              ${BROWSER}"/>
+  <TestValue group="Robot Framework" type="isi" value="@{items} =              Split String     ${*GTD.warenkorb.liste}     \#&lt;br/&gt;Put Item List To Cart     @{items}&lt;br/&gt;Proceed To Order"/>
+  <TestValue group="Robot Framework" type="tcpost" value="Close Browser"/>
+  <TestValue group="*ti.gtd.robot" type="tcpre" value="neu, kunde, Neukunden&lt;br/&gt;neu, warenkorb, warenkoerbe"/>
+  <TestValue group="*ti.gtd.robot*" type="tcpre" value="neu, kunde, Neukunden&lt;br/&gt;neu, warenkorb, warenkoerbe"/>
+  <Snapshots>
+    <Snapshot crDat="2022.11.29 at 13:45:15 CET" rSeq="156:160 150:153 123:125 139 127:130 161:165 132:134" rSet="156:160 150:153">
+      <Title language="German" value="Tutorial"/>
+      <Title language="English" value="Tutorial"/>
+    </Snapshot>
+  </Snapshots>
+  <TestValue group="Tutorial - Folge 1*" type="isi" value="Gehen Sie in den Warenkorb und drücken Sie die Taste &quot;weiter zur Kasse&quot;."/>
+</LFET>
