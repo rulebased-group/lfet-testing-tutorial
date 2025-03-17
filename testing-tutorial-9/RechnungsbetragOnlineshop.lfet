@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.3.0 (250206a)" language="German" saveDate="2025.03.11 at 11:52:21 CET" saveUser="doschweier">
+  <Conditions>
+    <Condition uId="17409960723449642">
+      <Title language="German" value="Bestellwert"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714110690599127">
+          <Symbol language="German" value="gering"/>
+          <Title language="German" value="[ 0,0 : 20,0 ["/>
+          <Symbol language="English" value="small"/>
+          <Title language="English" value="[0,0;20,0["/>
+          <TestValue group="Gherkin" type="tsi" value="# Warenkorb mit der ID ${*GTD.warenkorb.ID} und einem Warenwert von ${*GTD.warenkorb.Warenwert} EUR&lt;br/&gt;die folgenden Artikel in den Warenkorb gelegt werden&lt;br/&gt;${*GTD.warenkorb.itemKeys}"/>
+          <TestValue group="*ti.gtd" type="tsi" value="tabelle, rabattcode, rabattcode, ${*GTD.warenkorb.Warenwert} &gt;= Mindestwert"/>
+          <TestValue group="*ti.check.Gherkin" type="tsi" value="num  betrag = ${*GTD.warenkorb.Warenwert}"/>
+          <TestValue group="*ti.gtd" type="tcpre" value="zeile, warenkorb, WarenkoerbeGherkin, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714110690619129">
+          <Symbol language="German" value="normal"/>
+          <Title language="German" value="[ 20,0 : 75,0 ["/>
+          <Symbol language="English" value="usual"/>
+          <Title language="English" value="[20,0:75,0["/>
+          <TestValue group="Gherkin" type="tsi" value="# Warenkorb mit der ID ${*GTD.warenkorb.ID} und einem Warenwert von ${*GTD.warenkorb.Warenwert} EUR&lt;br/&gt;die folgenden Artikel in den Warenkorb gelegt werden&lt;br/&gt;${*GTD.warenkorb.itemKeys}"/>
+          <TestValue group="*ti.gtd" type="tsi" value="tabelle, rabattcode, rabattcode, ${*GTD.warenkorb.Warenwert} &gt;= Mindestwert"/>
+          <TestValue group="*ti.check.Gherkin" type="tsi" value="num  betrag = ${*GTD.warenkorb.Warenwert}"/>
+          <TestValue group="*ti.gtd" type="tcpre" value="zeile, warenkorb, WarenkoerbeGherkin, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714111827649136">
+          <Symbol language="German" value="hoch"/>
+          <Title language="German" value="[ 75,0 : 300,0 ["/>
+          <Symbol language="English" value="large"/>
+          <Title language="English" value="[75,0; 300,0["/>
+          <TestValue group="Gherkin" type="tsi" value="# Warenkorb mit der ID ${*GTD.warenkorb.ID} und einem Warenwert von ${*GTD.warenkorb.Warenwert} EUR&lt;br/&gt;die folgenden Artikel in den Warenkorb gelegt werden&lt;br/&gt;${*GTD.warenkorb.itemKeys}"/>
+          <TestValue group="*ti.gtd" type="tsi" value="tabelle, rabattcode, rabattcode, ${*GTD.warenkorb.Warenwert} &gt;= Mindestwert"/>
+          <TestValue group="*ti.check.Gherkin" type="tsi" value="num  betrag = ${*GTD.warenkorb.Warenwert}"/>
+          <TestValue group="*ti.gtd" type="tcpre" value="zeile, warenkorb, WarenkoerbeGherkin, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714112263679139">
+          <Symbol language="German" value="sehr hoch"/>
+          <Title language="German" value="[ 300,0 : Inf ["/>
+          <Symbol language="English" value="very large"/>
+          <Title language="English" value="[ 300,0 : Inf ["/>
+          <TestValue group="Gherkin" type="tsi" value="# Warenkorb mit der ID ${*GTD.warenkorb.ID} und einem Warenwert von ${*GTD.warenkorb.Warenwert} EUR&lt;br/&gt;die folgenden Artikel in den Warenkorb gelegt werden&lt;br/&gt;${*GTD.warenkorb.itemKeys}"/>
+          <TestValue group="*ti.gtd" type="tsi" value="tabelle, rabattcode, rabattcode, ${*GTD.warenkorb.Warenwert} &gt;= Mindestwert"/>
+          <TestValue group="*ti.check.Gherkin" type="tsi" value="num  betrag = ${*GTD.warenkorb.Warenwert}"/>
+          <TestValue group="*ti.gtd" type="tcpre" value="zeile, warenkorb, WarenkoerbeGherkin, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="order value"/>
+    </Condition>
+    <Condition uId="17409962442209680">
+      <Title language="German" value="Rabattcode"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="17409986871689944">
+          <Symbol language="German" value="ohne"/>
+          <Title language="German" value="kein Rabattcode wurde erfasst"/>
+          <TestValue group="Gherkin" type="tsi" value="kein Rabattcode erfasst wird"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="17409986871709946">
+          <Symbol language="German" value="mit"/>
+          <Title language="German" value="Rabattcode wurde erfasst"/>
+          <TestValue group="Gherkin" type="tsi" value="# Rabattkonditionen&lt;br/&gt;# variabel: ${*GTD.rabattcode.variabel}&lt;br/&gt;# absolut: ${*GTD.rabattcode.absolut}&lt;br/&gt;im Warenkorb der Rabattcode '${*GTD.rabattcode.code}' hinzugefügt wird"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="17409962902209682">
+      <Title language="German" value="Rabattvariante"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="17409988736090295">
+          <Symbol language="German" value="€"/>
+          <Title language="German" value="fester Betrag wird von Bestellwert abgezogen"/>
+          <TestValue group="*ti.gtd" type="tsi" value="tabelle, rabattcode, rabattcode, absolut &gt; 0&lt;br/&gt;tabelle, rabattcode, rabattcode, variabel = 0"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="17409988736110297">
+          <Symbol language="German" value="%"/>
+          <Title language="German" value="prozentualer Nachlass auf den Bestellwert"/>
+          <TestValue group="*ti.gtd" type="tsi" value="tabelle, rabattcode, rabattcode, absolut = 0&lt;br/&gt;tabelle, rabattcode, rabattcode, variabel &gt; 0"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="17409961227589666">
+      <Title language="German" value="Rabatt &lt; Bestellwert"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="17378187176324721">
+          <Symbol language="German" value="J"/>
+          <Title language="German" value="Ja"/>
+          <Symbol language="English" value="J"/>
+          <Title language="English" value="Ja"/>
+          <TestValue group="*ti.gtd" type="tsi" value="tabelle, rabattcode, rabattcode, absolut &lt; ${*GTD.warenkorb.warenwert}"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="17378187176344723">
+          <Symbol language="German" value="N"/>
+          <Title language="German" value="Nein"/>
+          <Symbol language="English" value="N"/>
+          <Title language="English" value="Nein"/>
+          <TestValue group="*ti.gtd" type="tsi" value="tabelle, rabattcode, rabattcode, absolut &gt;= ${*GTD.warenkorb.warenwert}"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="Rabatt &lt; Warenwert"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="17409963974449684">
+      <Title language="German" value="Rabatt berücksichtigen"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="17411602715317656">
+          <Symbol language="German" value="X"/>
+          <Title language="German" value="Aktion ausführen"/>
+          <TestValue group="*ti.check.Gherkin" type="tsi" value="num  prozentual = ${*GTD.warenkorb.warenwert} * ${*GTD.rabattcode.variabel}&lt;br/&gt;num  rabatt = prozentual + ${*GTD.rabattcode.absolut}&lt;br/&gt;num  betrag = ${*GTD.warenkorb.warenwert} - rabatt"/>
+          <TestValue group="Gherkin" type="tse" value="soll auf der Rechnung ein Rabatt von ${*LFET.num.rabatt:#0.00} EUR ausgewiesen werden"/>
+        </ActionOccurrence>
+        <TestValue group="Gherkin" type="tse" value="kein Rabatt darf auf der Rechnung ausgewiesen werden"/>
+        <TestValue group="*ti.att.Gherkin" type="tsi" value="sid=500"/>
+      </ActionOccurrences>
+      <TestValue group="*ti.att.Gherkin" type="tspre" value="sid=100"/>
+    </Action>
+    <Action uId="11446800828767967">
+      <Title language="German" value="Porto berechnen"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="17411602717947665">
+          <Symbol language="German" value="X"/>
+          <Title language="German" value="4,95"/>
+          <TestValue group="*ti.check.Gherkin" type="tsi" value="num  porto = ${*LFET.Beschreibung}&lt;br/&gt;num  betrag = betrag + porto"/>
+          <TestValue group="Gherkin" type="tse" value="soll ein Porto von ${*LFET.num.porto:#0.00} EUR auf der Rechnung ausgewiesen werden"/>
+        </ActionOccurrence>
+        <TestValue group="Gherkin" type="tse" value="kein Porto darf auf der Rechnung ausgewiesen werden"/>
+        <TestValue group="*ti.att.Gherkin" type="tsi" value="sid=520"/>
+      </ActionOccurrences>
+      <TestValue group="*ti.att.Gherkin" type="tspre" value="sid=110"/>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="Rechnungsbetrag"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="17409993453170914">
+          <Symbol language="German" value="akt."/>
+          <Title language="German" value="Rechnungsbetrag muss aktualisiert werden"/>
+          <TestValue group="Gherkin" type="tse" value="soll der Rechnungsbetrag ${*LFET.num.betrag:###0.00} EUR betragen"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="17409994104400926">
+          <Symbol language="German" value="übern."/>
+          <Title language="German" value="Bestellwert kann als Rechnungsbetrag übernommen werden"/>
+          <TestValue group="Gherkin" type="tse" value="soll der Rechnungsbetrag ${*GTD.warenkorb.Warenwert} EUR betragen"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+      <TestValue group="*ti.att.Gherkin" type="tspre" value="sid=300"/>
+    </Action>
+  </Actions>
+  <Rules lastId="28">
+    <Rule id="18">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="17409986871689944"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602717947665"/>
+    </Rule>
+    <Rule id="19">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="17409986871709946"/>
+      <ConditionOccurrenceLink link="17409988736090295"/>
+      <ConditionOccurrenceLink link="17378187176324721"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602715317656"/>
+      <ActionOccurrenceLink link="17411602717947665"/>
+    </Rule>
+    <Rule id="20">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="17409986871709946"/>
+      <ConditionOccurrenceLink link="17409988736090295"/>
+      <ConditionOccurrenceLink link="17378187176344723"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602717947665"/>
+    </Rule>
+    <Rule id="21">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="17409986871709946"/>
+      <ConditionOccurrenceLink link="17409988736110297"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602715317656"/>
+      <ActionOccurrenceLink link="17411602717947665"/>
+    </Rule>
+    <Rule id="22">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="17409986871689944"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602717947665"/>
+    </Rule>
+    <Rule id="26">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="17409986871709946"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602715317656"/>
+      <ActionOccurrenceLink link="17411602717947665"/>
+      <ConditionOccurrenceLink link="17409988736090295"/>
+      <ConditionOccurrenceLink link="17378187176324721"/>
+    </Rule>
+    <Rule id="27">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="17409986871709946"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602717947665"/>
+      <ConditionOccurrenceLink link="17409988736090295"/>
+      <ConditionOccurrenceLink link="17378187176344723"/>
+    </Rule>
+    <Rule id="28">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="17409986871709946"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602715317656"/>
+      <ActionOccurrenceLink link="17411602717947665"/>
+      <ConditionOccurrenceLink link="17409988736110297"/>
+    </Rule>
+    <Rule id="13">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ConditionOccurrenceLink link="17409986871689944"/>
+      <ActionOccurrenceLink link="17409994104400926"/>
+    </Rule>
+    <Rule id="24">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ConditionOccurrenceLink link="17409986871709946"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602715317656"/>
+    </Rule>
+    <Rule id="15">
+      <ConditionOccurrenceLink link="15714112263679139"/>
+      <ConditionOccurrenceLink link="17409986871689944"/>
+      <ActionOccurrenceLink link="17409994104400926"/>
+    </Rule>
+    <Rule id="25">
+      <ConditionOccurrenceLink link="15714112263679139"/>
+      <ConditionOccurrenceLink link="17409986871709946"/>
+      <ActionOccurrenceLink link="17409993453170914"/>
+      <ActionOccurrenceLink link="17411602715317656"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Rechnungsbetrag berechnen"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <TestValueGroups selectedGroup="Gherkin">
+    <TestValueGroup name="Gherkin" description="Testfallgenerierung in der Gherkin-Syntax kann für verschiedene Testausführungswerkzeuge verwendet werden." tvgTiAtt="*ti.att.Gherkin" tvgTiCheck="*ti.check.Gherkin" tvgTiGTD="*ti.gtd">
+      <Config name="Tutorial" parms="-Group 'Gherkin' -GtdDirectory 'testdata' -GtdFileNamePattern '*.csv' -NonExecutableRules '50' -RecommendedTestCases -OutGherkin 'RechnungsbetragOnlineshop.feature'"/>
+    </TestValueGroup>
+    <TestValueGroup name="*ti.att.Gherkin"/>
+    <TestValueGroup name="*ti.check.Gherkin"/>
+    <TestValueGroup name="*ti.gtd"/>
+  </TestValueGroups>
+  <TestValue group="Gherkin" type="tcpre" value="# language: de&lt;br/&gt;&lt;br/&gt;ich bin im JPetStore angemeldet als '${*GTD.kunde.benutzername}' mit dem Passwort '${*GTD.kunde.passwort}'"/>
+  <TestValue group="Gherkin" type="isi" value="Und   ich den Kauf abschließe"/>
+  <TestValue group="*ti.gtd" type="tcpre" value="tabelle, kunde, Bestandskunden&lt;br/&gt;tabelle, rabattcode, PromoCodes, Kategorie = alle"/>
+  <TestValue group="*ti.check.Gherkin" type="tcpre" value="num    rechnungsbetrag = 0.00"/>
+</LFET>

@@ -1,0 +1,42 @@
+*GTD.PromoCodes
+
+ Code       ;  Format   ; Kategorie  ; variabel ; absolut ; Mindestwert ; Hinweis
+=========================================================================================================
+ CLEMENS10  ; de-DE sym ;    alle    ;   10%    ;    0,00 ;       0,00  ; YouTube
+ CLEMENS10  ; de-DE val ;    alle    ;    0,10  ;    0,00 ;       0,00  ; YouTube
+ CLEMENS10  ; en-US sym ;    alle    ;   10%    ;    0.00 ;       0.00  ; YouTube
+ CLEMENS10  ; en-US val ;    alle    ;    0.10  ;    0.00 ;       0.00  ; YouTube
+ CLEMENS5   ; de-DE sym ;    alle    ;    0%    ;    5,00 ;       0,00  ; YouTube
+ CLEMENS5   ; de-DE val ;    alle    ;    0     ;    5,00 ;       0,00  ; YouTube
+ CLEMENS5   ; en-US sym ;    alle    ;    0%    ;    5.00 ;       0.00  ; YouTube
+ CLEMENS5   ; en-US val ;    alle    ;    0     ;    5.00 ;       0.00  ; YouTube
+ PIGGIBANK  ; de-DE val ;    alle    ;    0     ;    0,50 ;       0,00  ; Code für Produkte unter 1 EUR
+ MAGIC15    ; de-DE sym ;    alle    ;    0%    ;   15,00 ;       0,00  ; grosser Rabatt
+ MAGIC15    ; de-DE val ;    alle    ;    0     ;   15,00 ;       0,00  ; grosser Rabatt
+ MAGIC15    ; en-US sym ;    alle    ;    0%    ;   15.00 ;       0.00  ; grosser Rabatt
+ MAGIC15    ; en-US val ;    alle    ;    0     ;   15.00 ;       0.00  ; grosser Rabatt
+ MAGIC20    ; de-DE sym ;    alle    ;    0%    ;   20,00 ;       0,00  ; grosser Rabatt
+ MAGIC20    ; de-DE val ;    alle    ;    0     ;   20,00 ;       0,00  ; grosser Rabatt
+ MAGIC20    ; en-US sym ;    alle    ;    0%    ;   20.00 ;       0.00  ; grosser Rabatt
+ MAGIC20    ; en-US val ;    alle    ;    0     ;   20.00 ;       0.00  ; grosser Rabatt
+ MAGIC50    ; de-DE sym ;    alle    ;    0%    ;   50,00 ;       0,00  ; sehr grosser Rabatt
+ MAGIC50    ; de-DE val ;    alle    ;    0     ;   50,00 ;       0,00  ; sehr grosser Rabatt
+ MAGIC50    ; en-US sym ;    alle    ;    0%    ;   50.00 ;       0.00  ; sehr grosser Rabatt
+ MAGIC50    ; en-US val ;    alle    ;    0     ;   50.00 ;       0.00  ; sehr grosser Rabatt
+ MAGIC100   ; de-DE val ;    alle    ;    0     ;  100,00 ;       0,00  ; sehr grosser Rabatt
+ SNOOPY     ; de-DE sym ;    alle    ;    1,5%  ;    0    ;       0,00  ; Fachmagazin
+ SNOOPY     ; de-DE val ;    alle    ;    0,015 ;    0    ;       0,00  ; Fachmagazin
+ SNOOPY     ; en-US sym ;    alle    ;    1.5%  ;    0    ;       0.00  ; Fachmagazin
+ SNOOPY     ; en-US val ;    alle    ;    0.015 ;    0    ;       0.00  ; Fachmagazin
+ WENDY15    ; de-DE sym ;   Katzen   ;    0%    ;   15,00 ;      20,00  ; YouTube
+ WENDY15    ; de-DE val ;   Katzen   ;    0     ;   15,00 ;      20,00  ; YouTube
+ WENDY15    ; en-US sym ;   Katzen   ;    0%    ;   15.00 ;      20.00  ; YouTube
+ WENDY15    ; en-US val ;   Katzen   ;    0     ;   15.00 ;      20.00  ; YouTube
+ WENDY25    ; de-DE sym ;   Katzen   ;    2,5%  ;    0    ;       0,00  ; Instagram
+ WENDY25    ; de-DE val ;   Katzen   ;    0,025 ;    0    ;       0,00  ; Instagram
+ WENDY25    ; en-US sym ;   Katzen   ;    2.5%  ;    0    ;       0.00  ; Instagram
+ WENDY25    ; en-US val ;   Katzen   ;    0.025 ;    0    ;       0.00  ; Instagram
+ WENDY5     ; de-DE sym ;   Katzen   ;    5%    ;    0    ;       0,00  ; TikTok
+ WENDY5     ; de-DE val ;   Katzen   ;    0,5   ;    0    ;       0,00  ; TikTok
+ WENDY5     ; en-US sym ;   Katzen   ;    5%    ;    0    ;       0.00  ; TikTok
+ WENDY5     ; en-US val ;   Katzen   ;    0.5   ;    0    ;       0.00  ; TikTok
