@@ -1,0 +1,11 @@
+*GTD.Bestandskunden
+
+ FLAG ; DE-BL ; Benutzername        ; Passwort  ; Mail                              ; Vorname     ; Nachname    ; Adresse1                      ; Adresse2  ;  PLZ  ; Ort                   ; Land    ; Telefonnummer
+============================================================================================================================================================================================================================
+  OK  ; DE-BB ; c.doerner           ;  c.doe    ; c.doerner@yahoo.com               ; Carolina    ; Dörner      ; Schönleinsplatz 45            ;           ; 14641 ; Pausin                ; Germany ; 033231 / 93 25 946
+  OK  ; DE-BW ; w.sternberg         ;  w.ste    ; w.sternberg@gmx.com               ; Wastl       ; Sternberg   ; Arndesstieg 45                ;           ; 88373 ; Fleischwangen         ; Germany ; 01525 / 251 564 22
+  OK  ; DE-RP ; hmathes             ;  hmath    ; hmathes@t-online.de               ; Helfred     ; Mathes      ; An der Schleifscheibe 48      ;           ; 55481 ; Kludenbach            ; Germany ; 039056 / 39 36 992
+  OK  ; DE-SH ; zabel               ;  zabel    ; zabel@google.de                   ; Cersten     ; Zabel       ; Tschirnhausstraße 45          ;           ; 25704 ; Bargenstedt           ; Germany ; 037347 / 91 42 122
+  OK  ; DE-SL ; dietlind.boehm      ;  dietl    ; dietlind.boehm@web.de             ; Dietlind    ; Böhm        ; Weißenburgstr. 12             ;           ; 66450 ; Bexbach               ; Germany ; 06826 / 74 67 161
+  OK  ; DE-SN ; boehler15           ;  boehl    ; boehler15@web.de                  ; Henni       ; Böhler      ; Berkersheimer Weg 45          ;           ; 01468 ; Moritzburg            ; Germany ; 01513 / 945 834 24
+  OK  ; US-CA ; j2ee                ;  j2ee     ; yourname@yourdomain.com           ; ABC         ; XYZ         ; 901 San Antonio Road          ; MS UCUP02 ; 94303 ; Palo Alto             ; USA     ; 555-555-5555

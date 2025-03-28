@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.3.0 (250206a)" language="German" saveDate="2025.03.27 at 11:31:56 CET" saveUser="doschweier">
+  <Conditions>
+    <Condition uId="15714110241739078">
+      <Title language="German" value="Bestellwert"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714110690599127">
+          <Symbol language="German" value="gering"/>
+          <Title language="German" value="[ 0,0 : 20,0 ["/>
+          <TestValue group="Tutorial - Folge 3" type="tsi" value="Legen Sie die folgenden Produkte in den Warenkorb:&lt;br/&gt;&lt;br/&gt;${*GTD.warenkorb.liste}"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714110690619129">
+          <Symbol language="German" value="normal"/>
+          <Title language="German" value="[ 20,0 : 75,0 ["/>
+          <TestValue group="Tutorial - Folge 3" type="tsi" value="Legen Sie die folgenden Produkte in den Warenkorb:&lt;br/&gt;&lt;br/&gt;${*GTD.warenkorb.liste}"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714111827649136">
+          <Symbol language="German" value="hoch"/>
+          <Title language="German" value="[ 75,0 : 300,0 ["/>
+          <TestValue group="Tutorial - Folge 3" type="tsi" value="Legen Sie die folgenden Produkte in den Warenkorb:&lt;br/&gt;&lt;br/&gt;${*GTD.warenkorb.liste}"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714112263679139">
+          <Symbol language="German" value="sehr hoch"/>
+          <Title language="German" value="[ 300,0 : Inf ["/>
+          <TestValue group="Tutorial - Folge 3" type="tsi" value="Legen Sie die folgenden Produkte in den Warenkorb:&lt;br/&gt;&lt;br/&gt;${*GTD.warenkorb.liste}"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Warenwert in &quot;${$LFET.Beschreibung}&quot;"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <TestValue group="*ti.att.Tutorial - Folge 3" type="tspre" value="name=&quot;Waren in den Warenkorb legen&quot;"/>
+    </Condition>
+    <Condition uId="11446800829457960">
+      <Title language="German" value="Erste Bestellung"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15729537548780006">
+          <Symbol language="German" value="J"/>
+          <Title language="German" value="Ja"/>
+          <TestValue group="Tutorial - Folge 3" type="tsi" value="Melden Sie sich am JPetStore mit den folgenden Informationen an:&lt;br/&gt;&lt;br/&gt;Benutzername: ${*GTD.kunde.benutzername}&lt;br/&gt;Passwort: ${*GTD.kunde.passwort}"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, dass auf der Startseite &quot;Hallo ${*GTD.kunde.vorname}!&quot; zu lesen ist."/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tcpre" value="neu, kunde, Neukunden"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15729537548800008">
+          <Symbol language="German" value="N"/>
+          <Title language="German" value="Nein"/>
+          <TestValue group="Tutorial - Folge 3" type="tsi" value="Melden Sie sich am JPetStore mit den folgenden Informationen an:&lt;br/&gt;&lt;br/&gt;Benutzername: ${*GTD.kunde.benutzername}&lt;br/&gt;Passwort: ${*GTD.kunde.passwort}"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, dass auf der Startseite &quot;Hallo ${*GTD.kunde.vorname}!&quot; zu lesen ist."/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <TestValue group="*ti.att.Tutorial - Folge 3" type="tspre" value="force=true, sid=10, name=&quot;Anmeldung am JPetStore&quot;"/>
+    </Condition>
+    <Condition uId="15714114531689185">
+      <Title language="German" value="Art des Warenkorbs"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714116272349259">
+          <Symbol language="German" value="1 Prod."/>
+          <Title language="German" value="nur ein Produkt in beliebiger Anzahl"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;1 Prod.&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714116272369261">
+          <Symbol language="German" value="1 Kat."/>
+          <Title language="German" value="beliebige Anzahl von Produkten aus genau einer Kategorie"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;1 Kat.&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714117223589266">
+          <Symbol language="German" value="2 Kat."/>
+          <Title language="German" value="beliebige Anzahl von Produkten aus genau zwei Kategorien"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;2 Kat.&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714117718229269">
+          <Symbol language="German" value="n Kat."/>
+          <Title language="German" value="gemischter Warenkorb aus mehr als zwei Kategorien"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Typ=&quot;n Kat.&quot;"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15714115122489187">
+      <Title language="German" value="mindestens ein Tier aus der Kategorie"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714118221089411">
+          <Symbol language="German" value="Fische"/>
+          <Title language="German" value="Kategorie Fische"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Fische=1"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714118221109413">
+          <Symbol language="German" value="Hunde"/>
+          <Title language="German" value="Kategorie Hunde"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Hunde=1"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714118702929418">
+          <Symbol language="German" value="Rept."/>
+          <Title language="German" value="Kategorie Reptilien"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Reptilien=1"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714118867339421">
+          <Symbol language="German" value="Katzen"/>
+          <Title language="German" value="Kategorie Katzen"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Katzen=1"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714118983089424">
+          <Symbol language="German" value="Vögel"/>
+          <Title language="German" value="Kategorie Vögel"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, warenkorb, warenkorb, Voegel=1"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="15714113532899180">
+      <Title language="German" value="Region innerhalb von Deutschland"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="15714119877440774">
+          <Symbol language="German" value="Nord"/>
+          <Title language="German" value="Kunden aus den Bundesländern Bremen, Hamburg, Mecklenburg-Vorpommern, Niedersachsen und Schleswig Holstein"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-HB, DE-HH, DE-MV, DE-NI, DE-SH)&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714119877460776">
+          <Symbol language="German" value="Ost"/>
+          <Title language="German" value="Kunden aus den Bundesländern Berlin, Brandenburg, Sachsen, Sachsen-Anhalt und Thüringen"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-BE, DE-BB, DE-SN, DE-ST, DE-TH)&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714120011950781">
+          <Symbol language="German" value="Süd"/>
+          <Title language="German" value="Kunden aus den Bundesländern Baden-Württemberg und Bayern"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-BW, DE-BY)&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15714120047960783">
+          <Symbol language="German" value="West"/>
+          <Title language="German" value="Kunden aus den Bundesländern Hessen, Nordrhein-Westfalen, Rheinland-Pfalz und Saarland"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, kunde, kunde, DE-BL in &quot;(DE-HE, DE-NW, DE-RP, DE-SL)&quot;"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="15719844997174546">
+          <Symbol language="German" value="sonst."/>
+          <Title language="German" value="Kunden außerhalb von Deutschland oder ohne Angabe"/>
+          <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tsi" value="neu, kunde, kunde, Land != Germany"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+      <Title language="English" value="destination"/>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="11446800828767967">
+      <Title language="German" value="Kreditkarte: American Express"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714126476301720">
+          <Symbol language="German" value="AMEX"/>
+          <Title language="German" value="American Express"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=510, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=710, name=&quot;Zahlungsmethode 'AMEX' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15714126632802235">
+      <Title language="German" value="Kreditkarte: Diners Club"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714126632832238">
+          <Symbol language="German" value="DC"/>
+          <Title language="German" value="Diners Club"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=520, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=720, name=&quot;Zahlungsmethode 'DC' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="Kreditkarte: Mastercard"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714126527942060">
+          <Symbol language="German" value="MC"/>
+          <Title language="German" value="Mastercard"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=530, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=730, name=&quot;Zahlungsmethode 'MC' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15714126565832227">
+      <Title language="German" value="Kreditkarte: VISA"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714126565862230">
+          <Symbol language="German" value="VISA"/>
+          <Title language="German" value="VISA Card"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=540, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=740, name=&quot;Zahlungsmethode 'VISA' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15714129178622247">
+      <Title language="German" value="online: Paypal"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714129178652250">
+          <Symbol language="German" value="Paypal"/>
+          <Title language="German" value="Aktion ausführen"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=550, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=750, name=&quot;Zahlungsmethode 'Paypal' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15714129186452254">
+      <Title language="German" value="online: sofortüberweisung.de"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714129186482257">
+          <Symbol language="German" value="sofort"/>
+          <Title language="German" value="sofortüberweisung.de"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=560, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=760, name=&quot;Zahlungsmethode 'sofort' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15714129714132268">
+      <Title language="German" value="online: giropay"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714129714162271">
+          <Symbol language="German" value="giropay"/>
+          <Title language="German" value="Bezahldienst giropay"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=570, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=770, name=&quot;Zahlungsmethode 'giropay' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15714129439572261">
+      <Title language="German" value="Lastschriftverfahren"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15714129439602264">
+          <Symbol language="German" value="LSV"/>
+          <Title language="German" value="Lastschriftverfahren"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=580, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=780, name=&quot;Zahlungsmethode 'LSV' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="15714130008082275">
+      <Title language="German" value="Rechnung"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="15716688245484817">
+          <Symbol language="German" value="Rechnung"/>
+          <Title language="German" value="Bezahlung per Rechnung"/>
+          <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; vorhanden ist und ausgewählt werden kann."/>
+          <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=590, name=&quot;Zahlungsmethode '${*LFET.Symbol}' ist in Auswahlbox.&quot;"/>
+        </ActionOccurrence>
+        <TestValue group="Tutorial - Folge 3" type="tse" value="Prüfen Sie, das die Option &quot;${*LFET.Aktion.Titel}&quot; in der Auswahlbox &quot;Zahlung mit:&quot; nicht vorhanden ist!"/>
+        <TestValue group="*ti.att.Tutorial - Folge 3" type="tse" value="sid=790, name=&quot;Zahlungsmethode 'Rechnung' soll nicht angeboten werden.&quot;"/>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="189">
+    <Rule id="178">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15714119877440774"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+    </Rule>
+    <Rule id="179">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15714119877460776"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+    </Rule>
+    <Rule id="180">
+      <ActionOccurrenceLink link="15714129186482257"/>
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15714120011950781"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+    </Rule>
+    <Rule id="181">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15714120047960783"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+    </Rule>
+    <Rule id="182">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15719844997174546"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ConditionOccurrenceLink link="15714118221089411"/>
+    </Rule>
+    <Rule id="183">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15719844997174546"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ConditionOccurrenceLink link="15714118221109413"/>
+    </Rule>
+    <Rule id="184">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15719844997174546"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ConditionOccurrenceLink link="15714118702929418"/>
+    </Rule>
+    <Rule id="185">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15719844997174546"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ConditionOccurrenceLink link="15714118867339421"/>
+    </Rule>
+    <Rule id="186">
+      <ConditionOccurrenceLink link="15714110690599127"/>
+      <ConditionOccurrenceLink link="15719844997174546"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ConditionOccurrenceLink link="15714118983089424"/>
+    </Rule>
+    <Rule id="187">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272349259"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="124">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118221089411"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="125">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118221109413"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="139">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118702929418"/>
+      <ActionOccurrenceLink link="15716688245484817"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="127">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118867339421"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="128">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714116272369261"/>
+      <ConditionOccurrenceLink link="15714118983089424"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+    </Rule>
+    <Rule id="129">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714117223589266"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="130">
+      <ConditionOccurrenceLink link="15714110690619129"/>
+      <ConditionOccurrenceLink link="15714117718229269"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+    <Rule id="188">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+    </Rule>
+    <Rule id="189">
+      <ConditionOccurrenceLink link="15714111827649136"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ConditionOccurrenceLink link="15729537548800008"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+    </Rule>
+    <Rule id="133">
+      <ConditionOccurrenceLink link="15714112263679139"/>
+      <ConditionOccurrenceLink link="15729537548780006"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+    </Rule>
+    <Rule id="134">
+      <ConditionOccurrenceLink link="15714112263679139"/>
+      <ConditionOccurrenceLink link="15729537548800008"/>
+      <ActionOccurrenceLink link="15716688245484817"/>
+      <ActionOccurrenceLink link="15714129439602264"/>
+      <ActionOccurrenceLink link="15714129714162271"/>
+      <ActionOccurrenceLink link="15714129178652250"/>
+      <ActionOccurrenceLink link="15714126476301720"/>
+      <ActionOccurrenceLink link="15714126632832238"/>
+      <ActionOccurrenceLink link="15714126527942060"/>
+      <ActionOccurrenceLink link="15714126565862230"/>
+      <ActionOccurrenceLink link="15714129186482257"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Anforderungen für die angebotenen Zahlungswege im Onlineshop"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+  <TestValueGroups selectedGroup="Tutorial - Folge 3">
+    <TestValueGroup name="Tutorial - Folge 3" description="In dieser Gruppe sind Testanweisungen hinterlegt, aus denen sich manuelle Testfälle generieren lassen." tvgTiAtt="*ti.att.Tutorial - Folge 3" tvgTiGTD="*ti.gtd.Tutorial - Folge 3">
+      <Config name="Excel" parms="-Group 'Tutorial - Folge 3' -GtdDirectory './testdaten' -NonExecutableRules '50' -RecommendedTestCases -ExportExcel './ZahlungswegeOnlineshop.testcases.xlsx'"/>
+      <Config name="TestLink" description="Diese Konfiguration dient zur automatischen Generierung von Testfällen, die automatisiert in Testlink überführt werden sollen." parms="-Group 'Tutorial - Folge 3' -GtdDirectory './testdaten' -NonExecutableRules '50' -RecommendedTestCases -ExportTestLink './ZahlungswegeOnlineshop.testlink.xml'"/>
+    </TestValueGroup>
+    <TestValueGroup name="*ti.att.Tutorial - Folge 3"/>
+    <TestValueGroup name="*ti.gtd.Tutorial - Folge 3"/>
+  </TestValueGroups>
+  <TestValue group="Tutorial - Folge 3" type="tcpost" value="Bestätigen Sie die folgenden Dialoge, um die Bestellung abzuschließen."/>
+  <TestValue group="Tutorial - Folge 3" type="isi" value="Klicken Sie in der Kopfzeile auf den Warenkorb.&lt;br/&gt;Wenn dieser angezeigt wird, dann klicken Sie auf &quot;Weiter zur Kasse&quot;."/>
+  <TestValue group="Tutorial - Folge 3" type="ise" value="Prüfen Sie, ob der Warenkorb einen Wert von ${*GTD.warenkorb.Warenwert} Euro hat."/>
+  <TestValue group="*ti.gtd.Tutorial - Folge 3" type="tcpre" value="neu, kunde, Neukunden&lt;br/&gt;neu, warenkorb, WarenkoerbeTextuell"/>
+  <TestValue group="*ti.att.Tutorial - Folge 3" type="isi" value="name=&quot;Warenkorb bestellen&quot;"/>
+</LFET>
