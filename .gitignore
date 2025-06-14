@@ -1,0 +1,4 @@
+.lfet/lfet.*.info
+*.$bak*
+*.lfet_$temp
+*log_*_console.txt

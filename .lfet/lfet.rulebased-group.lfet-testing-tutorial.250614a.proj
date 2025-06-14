@@ -34,8 +34,9 @@ LFET:
         # List of regular expressions for allowed directory names
         # relative to the project content root
         # use always '/' as file separator
-        - ^(?i)[/]?testing-tutorial-[123][/]?$
-        - ^(?i)[/]?testing-tutorial-4/((lfet/domain)|(testsuiten))[/]?$
-        - ^(?i)[/]?testing-tutorial-[56]/01-initial[/]?$
-        - ^(?i)[/]?testing-tutorial-[567]/02-updated[/]?$
-        - ^(?i)[/]?testing-tutorial-[89][/]?$
+        - ^(?i)[/]?testing-tutorial-0[123][/]?$
+        - ^(?i)[/]?testing-tutorial-04/((lfet/domain)|(testsuiten))[/]?$
+        - ^(?i)[/]?testing-tutorial-0[56]/01-initial[/]?$
+        - ^(?i)[/]?testing-tutorial-0[567]/02-updated[/]?$
+        - ^(?i)[/]?testing-tutorial-0[89][/]?$
+        - ^(?i)[/]?testing-tutorial-10[/]?$
